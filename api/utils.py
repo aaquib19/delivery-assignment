@@ -23,6 +23,17 @@ db={
 
 paths = {
     #if c1 and c2 are there 
+    'C1':[
+        ['C1','L1']
+    ],
+    'C2':[
+        ['C2','L1']
+    ],
+    'C3':[
+        ['C3','L1']
+    ],
+
+
     'C1C2':
         [
         ['C1','C2','L1'],
@@ -98,7 +109,8 @@ def calculate_cost(order):
         cost_=0
         for i in range(len(path)):
             if(i == len(path)-1):
-                cost.append([res,path])
+                # cost.append([res,path])
+                cost.append(res)
                 break
 
             if path[i]=='L1':
@@ -115,9 +127,9 @@ def calculate_cost(order):
             
 
 
-    return cost
+    return {"cost":min(cost)}
     # print('order function')
     # return {"cost":min(cost)}
 
 # p = generate_paths_(list( {'C1', 'C2','C3'}))
-a= calculate_cost({'A': '1','B':1,'C':'1', 'D': '1'})
+a= calculate_cost({'A': '1','B':1,'C':'1'})
