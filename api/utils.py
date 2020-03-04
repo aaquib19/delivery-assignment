@@ -1,5 +1,6 @@
 from collections import defaultdict
-from itertools import permutations
+import math
+
 graph = {
 
     'L1':{'C1':3,'C2':2.5,'C3':2},
@@ -75,11 +76,7 @@ def calculate_travel_cost(curr, warehouses,dropped, path):
 
     res = 10
     weight = weight-5
-    while(weight>0):
-        res+=8
-
-        weight -=5
-    return res
+    return res + (math.ceil(weight/5)*8)
 
 
 
@@ -117,4 +114,12 @@ def calculate_cost(order):
     return {"cost":min(cost)}
  
 
-# ans = calculate_cost({'A': '1','B':1,'C':'1'})
+ans = calculate_cost(
+{
+	"A":"1",
+	"G":"1",
+	"H":"1",
+	"I":"3",
+
+}
+)
