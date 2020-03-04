@@ -13,7 +13,7 @@
    		<th>Description</th>
    	</tr>	
 	<tr>
-   	   <td>5.</td>
+   	   <td>1</td>
            <td>localhost:8000/get-cost/</td>
            <td>POST</td>
            <td>Public</td>
