@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from api.views import profile,MyFriend
+from api.views import getCost
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/', profile),
-    path('friend/', MyFriend.as_view()),
+    path('get-cost/', getCost),
 
 ]
