@@ -2,7 +2,7 @@
 
  ## Installation
 
-#Below step is for ubuntu 
+###Below step is for ubuntu <br/>
    Before doing anything you have to clone or download(and unzip) the project folder, open terminal and navigate to the project folder and run:
 
    ```
