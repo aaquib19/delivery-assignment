@@ -2,7 +2,7 @@
 
  ## Installation
 
- ### Below steps are for ubuntu
+ ### Below steps are for ubuntu and you would need postman to check api
    Before doing anything you have to clone or download(and unzip) the project folder, open terminal and navigate to the project folder and run:
 
    ```
@@ -10,7 +10,11 @@
    source venv/bin/activate
    pip install -r requirements.txt
   
+ 
+   
    ```
+   
+   
 
    This will install all the dependencies required by the project.
 
