@@ -1,9 +1,7 @@
 # Delivery-assignment
 
    ``` 
-   api
-
-localhost:8000/get-cost/
+   api : localhost:8000/get-cost/
    ```
 
 
