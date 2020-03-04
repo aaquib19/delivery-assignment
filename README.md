@@ -1,6 +1,5 @@
 # Delivery-assignment
 
-``` 
 
 
 ### Api endpoints
@@ -25,7 +24,6 @@
    </table>
 
 
-```
 ```
 Add raw data as an input :
 {
