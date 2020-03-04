@@ -1,5 +1,26 @@
 # Delivery-assignment
 
+ ## Installation
+
+#Below step is for ubuntu 
+   Before doing anything you have to clone or download(and unzip) the project folder, open terminal and navigate to the project folder and run:
+
+   ```
+   virtualenv -p python3 venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+  
+   ```
+
+   This will install all the dependencies required by the project.
+
+
+### Running the server
+
+```
+python manage.py runserver
+
+```
 
 
 ### Api endpoints
