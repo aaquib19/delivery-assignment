@@ -1,7 +1,30 @@
 # Delivery-assignment
 
 ``` 
-api : localhost:8000/get-cost/
+
+
+### Api endpoints
+
+   <table>
+   	<tr>
+   		<th>S.No.</th>
+   		<th>Route</th>
+   		<th>Method</th>
+   		<th>Access</th>
+   		<th>Description</th>
+   	</tr>
+
+   	<tr>
+           <td>5.</td>
+           <td>localhost:8000/get-cost/</td>
+           <td>POST</td>
+           <td>Public</td>
+           <td>return minimum cost</td>
+       </tr>
+
+   </table>
+
+
 ```
 ```
 Add raw data as an input :
