@@ -44,10 +44,11 @@ python manage.py runserver
 
 
 
-### Input
+### Example : 
 
 
 ```
+
 Add raw data as an input :
 {
 	"A":"1",
