@@ -56,13 +56,8 @@ paths = {
         ['C1','C2','L1','C3','L1'],
         ['C1','L1','C2','L1','C3','L1'],
         ['C1','L1','C2','C3','L1'],
-        
-
-        # ['C2','L1','C1','L1','C3','L1'],
         ['C2','C1','L1','C3','L1'],
         ['C2','C3','L1','C1'],
-
-
         ['C3','L1','C2','C1','L1'],
         ['C3','C2','C1','L1'],
         ['C3','L1','C2','L1','C1','L1'],
@@ -93,15 +88,14 @@ def calculate_cost(order):
     center = set()
     warehouses = defaultdict(lambda : 0)
     for item in order:
-        x = float(order[item])*db[item]['weight']
-        # print(x)
+        wgt = float(order[item])*db[item]['weight']
         center.add(db[item]['loc'])
-        warehouses[db[item]['loc']] +=x
+        warehouses[db[item]['loc']] +=wgt
     # print(warehouses,center)
 
     center = sorted(center)
     # print(center)
-    paths_ = paths["".join(center)]#generate_paths_(center)
+    paths_ = paths["".join(center)]
     cost = []
     for path in paths_:
         res = 0
@@ -109,27 +103,18 @@ def calculate_cost(order):
         cost_=0
         for i in range(len(path)):
             if(i == len(path)-1):
-                # cost.append([res,path])
                 cost.append(res)
                 break
-
             if path[i]=='L1':
                 dropped.extend(path[:i])
                 cost_ = 0
-            # print(path[i],warehouses[path[i]],"asdfas")
             cost_ =calculate_travel_cost(path[i],warehouses,dropped,path)
             res += cost_*graph[path[i]][path[i+1]]
-            # print("fasdfas",res, cost_, graph[path[i]][path[i+1]])
-        # print(res,path)
-            # print(res)
-    # print(cost)
-
+      
             
 
 
     return {"cost":min(cost)}
-    # print('order function')
-    # return {"cost":min(cost)}
+ 
 
-# p = generate_paths_(list( {'C1', 'C2','C3'}))
-a= calculate_cost({'A': '1','B':1,'C':'1'})
+# ans = calculate_cost({'A': '1','B':1,'C':'1'})
